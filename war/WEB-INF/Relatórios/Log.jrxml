@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="departamento" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="30" rightMargin="30" topMargin="20" bottomMargin="20">
+	<property name="ireport.scriptlethandling" value="0"/>
+	<property name="ireport.encoding" value="UTF-8"/>
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<import value="net.sf.jasperreports.engine.*"/>
+	<import value="java.util.*"/>
+	<import value="net.sf.jasperreports.engine.data.*"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="data" class="java.lang.String">
+		<fieldDescription><![CDATA[data]]></fieldDescription>
+	</field>
+	<field name="descricao" class="java.lang.String">
+		<fieldDescription><![CDATA[descricao]]></fieldDescription>
+	</field>
+	<field name="id_usuario" class="java.lang.String">
+		<fieldDescription><![CDATA[id_usuario]]></fieldDescription>
+	</field>
+	<field name="tipo_alteracao" class="java.lang.String">
+		<fieldDescription><![CDATA[tipo_alteracao]]></fieldDescription>
+	</field>
+	<field name="tipo_usuario" class="java.lang.String">
+		<fieldDescription><![CDATA[tipo_usuario]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="64" splitType="Stretch">
+			<staticText>
+				<reportElement key="staticText-1" x="0" y="0" width="277" height="23"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="16" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[Relatório de Log de Segurança]]></text>
+			</staticText>
+			<image>
+				<reportElement x="380" y="0" width="155" height="50"/>
+				<imageExpression class="java.lang.String"><![CDATA["C:\\Users\\Luchiari\\workspace\\sgft\\war\\WEB-INF\\Relatórios\\logopreto.png"]]></imageExpression>
+			</image>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="30" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="9" width="90" height="20"/>
+				<textElement>
+					<font fontName="Comic Sans MS" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Id do Usuário]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="90" y="9" width="35" height="20"/>
+				<textElement>
+					<font fontName="Comic Sans MS" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tipo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="125" y="10" width="123" height="20"/>
+				<textElement>
+					<font fontName="Comic Sans MS" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tipo de Alteração]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="248" y="9" width="187" height="20"/>
+				<textElement>
+					<font fontName="Comic Sans MS" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Detalhe]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="435" y="9" width="100" height="20"/>
+				<textElement>
+					<font fontName="Comic Sans MS" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Data]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="29" width="535" height="1"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="46" splitType="Stretch">
+			<textField>
+				<reportElement x="435" y="6" width="100" height="40"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{data}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="248" y="6" width="187" height="40"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{descricao}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="5" width="90" height="41"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{id_usuario}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="125" y="6" width="123" height="40"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{tipo_alteracao}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="90" y="5" width="35" height="41"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{tipo_usuario}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="45" width="535" height="1"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
